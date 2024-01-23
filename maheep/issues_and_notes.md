@@ -27,4 +27,4 @@ RepresentationConfig = namedtuple(
 )
 ```
 
-* 
+* Should we use the `AutoImageProcessor` as the tokenizer, i.e. `from transformers import AutoImageProcessor`?
