@@ -2,7 +2,7 @@
 
 ## Things to do that don't involve Pyvene:
 
-❌ Intialize a random resnetForImageClassification model without any pretraining
+✅ Intialize a random resnetForImageClassification model without any pretraining
 
 ❌ Create the PVR MNIST dataset using the CausalModel 
 
