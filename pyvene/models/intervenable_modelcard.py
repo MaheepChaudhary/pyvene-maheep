@@ -18,6 +18,7 @@ things that need to be changed.
 """
 
 import transformers.models as hf_models
+from transformers import ResNetForImageClassification
 from .blip.modelings_blip import BlipWrapper
 from .mlp.modelings_mlp import MLPModel, MLPForClassification
 from .gru.modelings_gru import GRUModel, GRULMHeadModel, GRUForClassification
@@ -45,6 +46,7 @@ type_to_module_mapping = {
     GRULMHeadModel: gru_lm_type_to_module_mapping,
     GRUForClassification: gru_classifier_type_to_module_mapping,
     # new model type goes here after defining the model files
+    ResNetForImageClassification: resnet_type_to_module_mapping,
 }
 
 
