@@ -37,6 +37,7 @@ CONST_MLP_TOPOLOGICAL_ORDER = [
 ]
 
 
+
 CONST_GRU_TOPOLOGICAL_ORDER = [
     "cell_input",
     "x2h_output",
@@ -80,3 +81,7 @@ CONST_RUN_INDICES = {
     "update_h2h_output": 1,
     "new_h2h_output": 2,
 }
+
+CONST_RESNET_TOPOLOGICAL_ORDER = [
+    "encoder_output",
+]
