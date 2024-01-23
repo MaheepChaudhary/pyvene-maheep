@@ -12,7 +12,7 @@
 
 ✅ Create a folder for the resnet model with resnet_modelings_intervenable.py in it
 
-❌ Create the type_to_module_mapping, type_to_dimension mapping, a create model function
+✅ Create the type_to_module_mapping, type_to_dimension mapping, a create model function
 
 ❌ Modify the dictionary in constants.py to include resnet
 
