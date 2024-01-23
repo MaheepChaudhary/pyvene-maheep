@@ -44,9 +44,7 @@ for k, v in resnet_type_to_module_mapping.items():
 resnet_classifier_type_to_dimension_mapping = resnet_type_to_dimension_mapping
 
 
-def create_resnet_classifier(
-    config, cache_dir=None
-):
+def create_resnet_classifier(cache_dir=None):
     """Creates a MLP model, config, and tokenizer from the given name and revision"""
     import transformers
     from transformers import ResNetForImageClassification, ResNetConfig
