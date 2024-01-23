@@ -14,9 +14,9 @@
 
 ✅ Create the type_to_module_mapping, type_to_dimension mapping, a create model function
 
-❌ Modify the dictionary in constants.py to include resnet
+✅ Modify the dictionary in constants.py to include resnet
 
-❌ Add a topological ordering to the constants.py
+✅ Add a topological ordering to the constants.py
 
 
 
