@@ -24,7 +24,6 @@ print(len(list(image_combinations))/2)
 for i, in tqdm(list(image_combinations)[:len(image_combinations/2)]):
     print(i)
 
-'''
 # Iterate over each combination
 for i,combination in tqdm(enumerate(image_combinations)):
     # Get the images and labels for the current combination
@@ -48,4 +47,3 @@ np.save('pvr_mnist/combined_labels.npy', combined_labels)
 for i, image in enumerate(combined_images):
     image.save(f'pvr_mnist/combined_image_{i}.png')
 
-'''
