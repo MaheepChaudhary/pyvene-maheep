@@ -4,7 +4,7 @@
 
 ✅ Intialize a random resnetForImageClassification model without any pretraining
 
-❌ Create the PVR MNIST dataset using the CausalModel 
+✅ Create the PVR MNIST dataset using the CausalModel 
 
 ❌ Train resnet on this dataset without any interventions
 
