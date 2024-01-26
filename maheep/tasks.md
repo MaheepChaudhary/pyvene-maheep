@@ -6,7 +6,7 @@
 
 ✅ Create the PVR MNIST dataset using the CausalModel 
 
-❌ Train resnet on this dataset without any interventions
+✅ Train resnet on this dataset without any interventions
 
 ## How to set up in pyvene:
 
