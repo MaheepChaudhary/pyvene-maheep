@@ -1,4 +1,4 @@
-from definitions import *
+from maheep.imports import *
 
 # print(len(os.listdir("/Users/maheepchaudhary/pytorch/Projects/Stanford/pyvene-maheep/maheep/pvr_mnist")))
 
@@ -45,7 +45,7 @@ for i,combination in tqdm(enumerate(combinations)):
     combined_image2 = np.concatenate([images[idx].reshape(28, 28) for idx in combination[2:]], axis=0)
     combined_image = np.concatenate([combined_image1, combined_image2], axis=1).reshape(56,56,1)
 
-    combined_label = labels[list(combination)]
+    combined_label = labels[list(combination)]     
 
     # Convert the combined image to PIL image
     combined_image = transforms.ToPILImage()(combined_image)
