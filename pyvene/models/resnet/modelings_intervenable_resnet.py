@@ -27,12 +27,12 @@ from ..constants import CONST_INPUT_HOOK, CONST_OUTPUT_HOOK
 # }
 
 resnet_type_to_module_mapping = {
-    "encoder_output": ("resnet.encoder.stages[%s]", CONST_OUTPUT_HOOK),
+    "encoder_output": ("encoder.stages[%s]", CONST_OUTPUT_HOOK),
     # "classifier_input": ("resnet.classifier", CONST_INPUT_HOOK),
 }
 
 resnet_type_to_dimension_mapping = {
-    "encoder_output": ("hidden_sizes"[0],),
+    "encoder_output": ("hidden_sizes[0]",),
     # "classifier_input": ("hidden_sizes"[-1],),
 }
 

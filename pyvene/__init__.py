@@ -2,7 +2,8 @@
 from .data_generators.causal_model import CausalModel
 from .models.intervenable_base import IntervenableModel
 from .models.configuration_intervenable_model import IntervenableConfig
-from .models.configuration_intervenable_model import RepresentationConfig
+# from .models.configuration_intervenable_model import RepresentationConfig
+from pyvene.models.configuration_intervenable_model import RepresentationConfig
 
 
 # Interventions
@@ -42,3 +43,4 @@ from .models.gru.modelings_intervenable_gru import create_gru_classifier
 from .models.gru.modelings_gru import GRUConfig
 from .models.llama.modelings_intervenable_llama import create_llama
 from .models.mlp.modelings_intervenable_mlp import create_mlp_classifier
+from .models.resnet.modelings_intervenable_resnet import create_resnet_classifier
