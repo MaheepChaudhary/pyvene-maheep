@@ -1,4 +1,5 @@
-from maheep.imports import *
+from imports import *
+
 
 # print(len(os.listdir("/Users/maheepchaudhary/pytorch/Projects/Stanford/pyvene-maheep/maheep/pvr_mnist")))
 
@@ -39,13 +40,14 @@ p(images.shape)
 # I will have to create a million combinations, which are currently, way more than 1 million. 
 
 # Iterate over each combination
-for i,combination in tqdm(enumerate(combinations)):
+for i in tqdm(range(len(combinations))):
+# for i,combination in tqdm(enumerate(combinations)):
     # Get the images and labels for the current combination
-    combined_image1 = np.concatenate([images[idx].reshape(28, 28) for idx in combination[:2]], axis=0)
-    combined_image2 = np.concatenate([images[idx].reshape(28, 28) for idx in combination[2:]], axis=0)
+    combined_image1 = np.concatenate([images[idx].reshape(28, 28) for idx in combinations[i][:2]], axis=0)
+    combined_image2 = np.concatenate([images[idx].reshape(28, 28) for idx in combinations[i][2:]], axis=0)
     combined_image = np.concatenate([combined_image1, combined_image2], axis=1).reshape(56,56,1)
 
-    combined_label = labels[list(combination)]     
+    combined_label = labels[list(combinations[i])]     
 
     # Convert the combined image to PIL image
     combined_image = transforms.ToPILImage()(combined_image)
