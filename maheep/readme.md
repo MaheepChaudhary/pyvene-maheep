@@ -12,5 +12,6 @@ Train Loss: 0.0936, Train Accuracy: 96.96%, Val Accuracy: 93.37%
 As for the evaluation on the testing dataset with certain conditions, the statistics are certainly failing with accuracy as following:
 
 ```
-
+100%|██████████| 706818/706818 [4:35:32<00:00, 42.75it/s]     
+Accuracy of the model on the training images: 49.37%
 ```
