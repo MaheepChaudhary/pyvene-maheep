@@ -27,6 +27,7 @@ from .models.interventions import LocalistRepresentationIntervention
 from .models.interventions import DistributedRepresentationIntervention
 from .models.interventions import SourcelessIntervention
 from .models.interventions import NoiseIntervention
+from .models.interventions import SigmoidMaskIntervention
 
 
 # Utils
@@ -44,3 +45,5 @@ from .models.gru.modelings_gru import GRUConfig
 from .models.llama.modelings_intervenable_llama import create_llama
 from .models.mlp.modelings_intervenable_mlp import create_mlp_classifier
 from .models.resnet.modelings_intervenable_resnet import create_resnet_classifier
+from .models.backpack_gpt2.modelings_intervenable_backpack_gpt2 import create_backpack_gpt2
+

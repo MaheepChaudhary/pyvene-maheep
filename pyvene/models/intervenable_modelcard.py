@@ -7,6 +7,7 @@ from .mlp.modelings_intervenable_mlp import *
 from .gru.modelings_intervenable_gru import *
 from .blip.modelings_intervenable_blip import *
 from .resnet.modelings_intervenable_resnet import *
+from .backpack_gpt2.modelings_intervenable_backpack_gpt2 import *
 
 
 #########################################################################
@@ -23,6 +24,7 @@ import transformers as t
 from .blip.modelings_blip import BlipWrapper
 from .mlp.modelings_mlp import MLPModel, MLPForClassification
 from .gru.modelings_gru import GRUModel, GRULMHeadModel, GRUForClassification
+from .backpack_gpt2.modelings_backpack_gpt2 import BackpackGPT2LMHeadModel
 
 global type_to_module_mapping
 global type_to_dimension_mapping
@@ -46,6 +48,7 @@ type_to_module_mapping = {
     GRUModel: gru_type_to_module_mapping,
     GRULMHeadModel: gru_lm_type_to_module_mapping,
     GRUForClassification: gru_classifier_type_to_module_mapping,
+    BackpackGPT2LMHeadModel: backpack_gpt2_lm_type_to_module_mapping,
     # new model type goes here after defining the model files
     t.ResNetForImageClassification: resnet_type_to_module_mapping,
 }
@@ -67,6 +70,7 @@ type_to_dimension_mapping = {
     GRUModel: gru_type_to_dimension_mapping,
     GRULMHeadModel: gru_lm_type_to_dimension_mapping,
     GRUForClassification: gru_classifier_type_to_dimension_mapping,
+    BackpackGPT2LMHeadModel: backpack_gpt2_lm_type_to_dimension_mapping,
     # new model type goes here after defining the model files
     t.ResNetForImageClassification: resnet_type_to_dimension_mapping,
 }
