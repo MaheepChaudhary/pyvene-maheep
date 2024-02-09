@@ -998,6 +998,7 @@ class IntervenableModel(nn.Module):
                     )
                     group_get_handlers.extend(get_handlers)
                 _ = self.model(**sources[group_id])
+                # _ = self.model(sources[group_id])
                 group_get_handlers.remove()
         else:
             # simply patch in the ones passed in
@@ -1341,8 +1342,10 @@ class IntervenableModel(nn.Module):
         )
 
         # returning un-intervened output without gradients
-        with torch.inference_mode():
-            base_outputs = self.model(**base)
+        # with torch.inference_mode():
+        base_outputs = self.model(**base)
+        # print("The base output is: ", base_outputs)
+            # base_outputs = self.model(base)
 
         try:
             # intervene
@@ -1367,6 +1370,7 @@ class IntervenableModel(nn.Module):
 
             # run intervened forward
             counterfactual_outputs = self.model(**base)
+            # counterfactual_outputs = self.model(base)
             set_handlers_to_remove.remove()
 
             self._output_validation()
@@ -1473,8 +1477,9 @@ class IntervenableModel(nn.Module):
         )
 
         # returning un-intervened output without gradients
-        with torch.inference_mode():
-            base_outputs = self.model.generate(inputs=base["input_ids"], **kwargs)
+        # with torch.inference_mode():
+        base_outputs = self.model.generate(inputs=base["input_ids"], **kwargs)
+        # print("The base outputs is", base_outputs)
 
         set_handlers_to_remove = None
         try:
