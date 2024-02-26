@@ -1343,8 +1343,8 @@ class IntervenableModel(nn.Module):
         )
 
         # returning un-intervened output without gradients
-        with torch.inference_mode():
-            base_outputs = self.model(**base)
+        # with torch.inference_mode():
+        base_outputs = self.model(**base)
 
         try:
             # intervene
